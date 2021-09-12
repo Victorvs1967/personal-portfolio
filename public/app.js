@@ -1,5 +1,6 @@
 const links = document.querySelectorAll('.link'),
-      projectContainer = document.querySelector('.project-container');
+      projectContainer = document.querySelector('.project-container'),
+      filters = document.querySelectorAll('.filter-btn');
 
 links.forEach(link => {
   link.addEventListener('click', () => {
@@ -18,4 +19,20 @@ projects.forEach(project => {
       </div>
     </div> 
   `;
+});
+
+filters.forEach(filterBtn => {
+  filterBtn.addEventListener('click', () => {
+    const id = filterBtn.getAttribute('id');
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach(card => {
+      if (card.getAttribute('data-tags').includes(id)) {
+        card.classList.remove('hide');
+      } else {
+        card.classList.add('hide');
+      }
+    });
+    filters.forEach(btn => btn.classList.remove('active'));
+    filterBtn.classList.add('active');
+  });
 });
