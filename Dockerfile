@@ -1,4 +1,4 @@
-FROM node:latest AS builder
+FROM node:latest
 
 WORKDIR /opt/web
 COPY package.json package-lock.json ./
@@ -7,4 +7,6 @@ RUN npm install
 ENV PATH="./node_modules/.bin:$PATH"
 
 COPY . ./
-RUN npm start
+
+EXPOSE 3000
+ENTRYPOINT ["npm","start"]
