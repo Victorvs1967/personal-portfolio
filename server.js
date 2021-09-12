@@ -16,3 +16,27 @@ app.use(express.json());
 app.get('/', (req, res) => json.sendFile(path.join(initialPath, 'index.html')));
 
 app.listen(3000, () => console.log('lisening...'));
+
+app.post('/mail', (req, res) => {
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD
+    }
+  });
+  const mailOptions = {
+    from: 'victorsmirnov67@gmail.com',
+    to: 'victorsmirnov67@gmail.com',
+    subject: 'portfolio',
+    text: `First name: ${firstname}, \nLast name: ${lastname}, \nEmail: ${email}, \nMessage: ${msg}`
+  };
+  transporter.sendMail(mailOptions, (err, result) => {
+    if (err) {
+      console.log(err);
+      res.json('opps! it seems like some error occured plz. try again.');
+    } else {
+      res.json('thanks for e-mailing me. i will replay to you within 2 working days.');
+    }
+  });
+});

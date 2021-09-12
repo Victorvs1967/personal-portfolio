@@ -1,6 +1,11 @@
 const links = document.querySelectorAll('.link'),
       projectContainer = document.querySelector('.project-container'),
-      filters = document.querySelectorAll('.filter-btn');
+      filters = document.querySelectorAll('.filter-btn'),
+      contactBtn = document.querySelector('.contact-btn'),
+      firstName = document.querySelector('.first-name'),
+      lastName = document.querySelector('.last-name'),
+      email = document.querySelector('.email'),
+      msg = document.querySelector('.message');
 
 links.forEach(link => {
   link.addEventListener('click', () => {
@@ -34,5 +39,22 @@ filters.forEach(filterBtn => {
     });
     filters.forEach(btn => btn.classList.remove('active'));
     filterBtn.classList.add('active');
+  });
+
+  contactBtn.addEventListener('click', () => {
+    if (firstName.value.length && lastName.value.length && email.value.length && msg.value.length) {
+      fetch('/mail', {
+        method: 'post',
+        headers: new Headers({'Content-Type': 'application/json'}),
+        body: JSON.stringify({
+          firstName: firstName.value,
+          lastName: lastName.value,
+          email: email.value,
+          msg: msg.value,
+        })
+      })
+      .then(res => res.json())
+      .then(data => alert(data));
+    }
   });
 });

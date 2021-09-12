@@ -16,5 +16,3 @@ const projects = [
     },
     // +8 more
 ]
-
-console.log(project);
