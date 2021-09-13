@@ -441,6 +441,24 @@ body {
     width: 50%;
     min-width: 320px;
   }
+  .left-col::before {
+    content: 'yes, its me';
+    text-transform: capitalize;
+    position: absolute;
+    right: 70px;
+    top: -35px;
+  }
+  .left-col::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    right: 150px;
+    width: 50px;
+    height: 2px;
+    background: #fff;
+    transform-origin: right;
+    transform: rotate(-30deg);
+  }
   .about-image {
     width: 240px;
   }

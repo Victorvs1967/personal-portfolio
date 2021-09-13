@@ -5,7 +5,9 @@ const links = document.querySelectorAll('.link'),
       firstName = document.querySelector('.first-name'),
       lastName = document.querySelector('.last-name'),
       email = document.querySelector('.email'),
-      msg = document.querySelector('.message');
+      msg = document.querySelector('.message'),
+      toggleBtn = document.querySelector('.toggle-btn'),
+      linkContainer = document.querySelector('.links-container');
 
 links.forEach(link => {
   link.addEventListener('click', () => {
@@ -57,4 +59,10 @@ filters.forEach(filterBtn => {
       .then(data => alert(data));
     }
   });
+});
+
+// toggle button
+toggleBtn.addEventListener('click', () => {
+  toggleBtn.classList.toggle('active');
+  linkContainer.classList.toggle('show');
 });
