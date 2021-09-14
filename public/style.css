@@ -154,7 +154,7 @@ body {
 .heading {
   text-align: center;
   font-weight: 400;
-  font-size: 3.5rem;
+  font-size: 3rem;
   text-transform: capitalize;
 }
 .sub-heading {
@@ -357,9 +357,10 @@ body {
   line-height: 40px;
 }
 
+/* Tablet view */
 @media (max-width: 996px) {
   html {
-    font-size: 14px;
+    font-size: 1.1rem;
   }
 
   /* toggle btn */
@@ -434,11 +435,14 @@ body {
     text-align: center;
   }
   .hero-heading {
-    font-size: 4.5rem;
+    font-size: 3rem;
   }
 
   /* about section */
-  .abour-me-container {
+  .heading {
+    font-size: 2rem;
+  }
+  .about-me-container {
     grid-template-columns: 1fr;
   }
   .left-col {
@@ -446,31 +450,53 @@ body {
     width: 50%;
     min-width: 320px;
   }
-  .left-col::before {
-    content: 'yes, its me';
-    text-transform: capitalize;
-    position: absolute;
-    right: 70px;
-    top: -35px;
-  }
-  .left-col::after {
-    content: '';
-    position: absolute;
-    top: -15px;
-    right: 150px;
-    width: 50px;
-    height: 2px;
-    background: #fff;
-    transform-origin: right;
-    transform: rotate(-30deg);
-  }
-  .about-image {
-    width: 240px;
-  }
   .skill-container, .project-container {
     grid-template-columns: repeat(1, 1fr);
   }
   .skill-card {
     grid-column: 1 span !important;
+  }
+
+  /* projects section */
+  .filters {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 60px 0;
+}
+
+}
+
+/* Sartphone view */
+@media (max-width: 500px) {
+  html {
+    font-size: 1rem;
+  }
+  p, .sub-heading, .about-paragraph, .left-col::before, .tags {
+    font-size: 1.1rem;
+  }
+  .about-image {
+    width: 90%;
+    margin: auto;
+    display: block;
+  }
+  .skill-container, .project-container {
+    grid-template-columns: 1fr;
+  }
+  .skill {
+    font-size: 2rem;
+  }
+  .project-name {
+    font-size: 2.1rem;
+  }
+  .name {
+    flex-direction: column;
+  }
+  .name input {
+    width: 100%;
+  }
+  .first-name {
+    margin-bottom: 20px !important;
   }
 }
