@@ -139,8 +139,10 @@ body {
 }
 .image {
   border-radius: 50%;
-  width: 33%;
-  height: 33%;
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
+  object-position: top;
 }
 
 /* about section */
@@ -421,6 +423,9 @@ body {
   }
   .home .image {
     width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
     margin: 40px;
   }
   .hero-content {
