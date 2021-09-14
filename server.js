@@ -31,9 +31,9 @@ app.post('/mail', (req, res) => {
   });
 
   const mailOptions = {
-    from: 'victorsmirnov67@gmail.com',
-    to: 'victorsmirnov67@gmail.com',
-    subject: 'portfolio',
+    from: email,
+    to: 'Victor',
+    subject: 'about portfolio',
     text: `First name: ${firstname}, \nLast name: ${lastname}, \nEmail: ${email}, \nMessage: ${msg}`
   };
 
