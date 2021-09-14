@@ -325,7 +325,6 @@ body {
   border: none;
   outline: none;
   margin: 30px 0;
-  text-transform: capitalize;
   resize: none;
 }
 .message {
@@ -338,6 +337,7 @@ body {
 .name input {
   width: 49%;
   margin: 0;
+  text-transform: capitalize;
 }
 .contact-form .btn {
   display: block;

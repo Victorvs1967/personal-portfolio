@@ -18,6 +18,9 @@ app.get('/', (req, res) => json.sendFile(path.join(initialPath, 'index.html')));
 app.listen(3000, () => console.log('lisening...'));
 
 app.post('/mail', (req, res) => {
+
+  const { firstname, lastname, email, msg } = req.body;
+
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -25,12 +28,14 @@ app.post('/mail', (req, res) => {
       pass: process.env.PASSWORD
     }
   });
+
   const mailOptions = {
     from: 'victorsmirnov67@gmail.com',
     to: 'victorsmirnov67@gmail.com',
     subject: 'portfolio',
     text: `First name: ${firstname}, \nLast name: ${lastname}, \nEmail: ${email}, \nMessage: ${msg}`
   };
+
   transporter.sendMail(mailOptions, (err, result) => {
     if (err) {
       console.log(err);
