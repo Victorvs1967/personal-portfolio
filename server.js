@@ -18,7 +18,6 @@ app.post('/mail', (req, res) => {
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
-    host: 'smtp.gmail.com',
     auth: {
       user: process.env.EMAIL,
       pass: process.env.PASSWORD
@@ -27,7 +26,7 @@ app.post('/mail', (req, res) => {
 
   const mailOptions = {
     from: email,
-    to: 'Victor',
+    to: process.env.EMAIL,
     subject: 'about portfolio',
     text: `First name: ${firstname}, \nLast name: ${lastname}, \nEmail: ${email}, \nMessage: ${msg}`
   };
