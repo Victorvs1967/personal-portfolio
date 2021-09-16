@@ -14,5 +14,4 @@ const projects = [
         tags: "#java, #mongodb, #angular, #fullstack",
         image: "project3.png",
     },
-    // +8 more
 ]
