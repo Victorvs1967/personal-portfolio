@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
 const dotenv = require('dotenv');
-const { json } = require('body-parser');
 const nodemailer = require('nodemailer');
 
 dotenv.config();
@@ -12,7 +11,9 @@ let app = express();
 app.use(express.static(initialPath));
 app.use(express.json());
 app.listen(3000, () => console.log('lisening...'));
-app.get('/', (req, res) => json.sendFile(path.join(initialPath, 'index.html')));
+
+app.get('/', (req, res) => res.sendFile(path.join(initialPath, 'index.html')));
+
 app.post('/mail', (req, res) => {
   const { firstname, lastname, email, msg } = req.body;
 
@@ -28,7 +29,7 @@ app.post('/mail', (req, res) => {
     from: email,
     to: process.env.EMAIL,
     subject: 'about portfolio',
-    text: `First name: ${firstname}, \nLast name: ${lastname}, \nEmail: ${email}, \nMessage: ${msg}`
+    text: `First name: ${firstname}, \nLast name: ${lastname}, \nEmail: ${email}, \nMessage:\n ${msg}`
   };
 
   transporter.sendMail(mailOptions, (err, result) => {
