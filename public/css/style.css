@@ -16,7 +16,7 @@ body {
 }
 
 /* navbar */
-.navbar {
+  .navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -126,7 +126,7 @@ body {
   background: #e3e3e3;
 }
 .info {
-  line-height: 30px;
+  line-height: 1.6rem;
   margin-bottom: 50px;
 }
 .btn {
@@ -262,6 +262,7 @@ body {
   background: #ff3559;
   color: #fff;
 }
+
 /* project container */
 .project-container {
   width: 100%;
@@ -349,7 +350,7 @@ body {
 }
 
 /* footer */
-.footer {
+  .footer {
   width: 100%;
   height: 60px;
   text-align: center;
