@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
 /* common */
 * {
   margin: 0;
@@ -12,7 +14,7 @@ body {
   position: relative;
   background: #1e1e1e;
   color: #fff;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* navbar */
