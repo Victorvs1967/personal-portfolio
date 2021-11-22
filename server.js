@@ -5,11 +5,12 @@ const nodemailer = require('nodemailer');
 
 dotenv.config();
 
-let initialPath = path.join(__dirname, 'public');
-let app = express();
+const initialPath = path.join(__dirname, 'public');
+const app = express();
 
 app.use(express.static(initialPath));
 app.use(express.json());
+
 app.listen(3000, () => console.log('lisening...'));
 
 app.get('/', (req, res) => res.sendFile(path.join(initialPath, 'index.html')));
