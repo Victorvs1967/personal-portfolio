@@ -22,7 +22,7 @@ const init = () => {
 
   // skills cards
   skills.forEach(skill => {
-    skillContainer.innerHtml += `      
+    skillContainer.innerHTML += `
       <div class="skill-card" style="--bg: ${skill.color}">
         <p class="skill">${skill.name}</p>
       </div>

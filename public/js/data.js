@@ -70,10 +70,6 @@ const skills = [
         color: "#326690"
     },
     {
-        name: "PostgreSQL",
-        color: "#326690"
-    },
-    {
         name: "Docker",
         color: "#ffa000"
     },
