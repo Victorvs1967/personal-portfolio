@@ -2,6 +2,7 @@ const toggleBtn = document.querySelector('.toggle-btn'),
       linksContainer = document.querySelector('.links-container'),
       links = document.querySelectorAll('.link'),
       filters = document.querySelectorAll('.filter-btn'),
+      skillContainer = document.querySelector('.skill-container'),
       projectContainer = document.querySelector('.project-container'),
       firstName = document.querySelector('.first-name'),
       lastName = document.querySelector('.last-name'),
@@ -17,6 +18,15 @@ const init = () => {
       links.forEach(ele => ele.classList.remove('active'));
       link.classList.add('active');
     });
+  });
+
+  // skills cards
+  skills.forEach(skill => {
+    skillContainer.innerHtml += `      
+      <div class="skill-card" style="--bg: ${skill.color}">
+        <p class="skill">${skill.name}</p>
+      </div>
+    `;
   });
 
   // project cards
