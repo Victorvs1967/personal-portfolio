@@ -3,19 +3,19 @@ const projects = [
         name: "Blog App",
         tags: "#javascript, #fullstack, #ui/ux, #backend",
         image: "blog.png",
-        url: "portfolio-dev.club:4200"
+        url: "http://www.portfolio-dev.club:4200"
     },
     {
         name: "Game App",
         tags: "#javascript, #fullstack",
         image: "game.png",
-        url: "portfolio-dev.club:4200"
+        url: "http://www.portfolio-dev.club:4200"
     },
     {
         name: "Todo App",
         tags: "#java, #mongodb, #angular, #fullstack",
         image: "todo.png",
-        url: "portfolio-dev.club:4200"
+        url: "http://www.portfolio-dev.club:4200"
     },
 ];
 
