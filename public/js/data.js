@@ -1,18 +1,19 @@
 const projects = [
     {
-        name: "project one",
+        name: "Blog App",
         tags: "#javascript, #fullstack, #ui/ux, #backend",
         image: "blog.png",
     },
     {
-        name: "project two",
+        name: "Game App",
         tags: "#javascript, #fullstack",
         image: "game.png",
     },
     {
-        name: "project three",
+        name: "Todo App",
         tags: "#java, #mongodb, #angular, #fullstack",
         image: "todo.png",
+        url: "http://portfolio-del.club:4200"
     },
 ];
 
