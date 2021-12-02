@@ -35,7 +35,9 @@ const init = () => {
       <div class="project-card" data-tags="#all, ${project.tags}">
         <img src="img/${project.image}" alt="image">
         <div class="content">
-          <h1 class="project-name">${project.name}</h1>
+        <a href="${project.url}" class="project-link">
+            <h1 class="project-name">${project.name}</h1>
+        </a>
           <span class="tags">${project.tags}</span>
         </div>
       </div> 
