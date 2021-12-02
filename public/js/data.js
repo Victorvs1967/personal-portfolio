@@ -2,17 +2,17 @@ const projects = [
     {
         name: "project one",
         tags: "#javascript, #fullstack, #ui/ux, #backend",
-        image: "project1.png",
+        image: "blog.png",
     },
     {
         name: "project two",
         tags: "#javascript, #fullstack",
-        image: "project2.png",
+        image: "game.png",
     },
     {
         name: "project three",
         tags: "#java, #mongodb, #angular, #fullstack",
-        image: "project3.png",
+        image: "todo.png",
     },
 ];
 
